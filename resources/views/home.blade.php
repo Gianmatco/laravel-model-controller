@@ -9,22 +9,25 @@ HOME
     
     <h1 class="red">home</h1>
 
-    <ul>
+    <div class="row">
+        
         @foreach ($movies as $movie)
-        <li><a href="route('detail',$movie->id)">{{$movie->title}}</a> {{$movie->title}}</li>
-
-    </ul>
-
-    @foreach ($movies as $movie)
-    <div class="card" style="width: 18rem;">
-        <img src="" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{$movie->title}}</h5>
-          <a href="#" class="btn btn-primary">{{$movie->original_title}}</a>
+        <div class="col-3">
+            <div class="card" >
+                
+                <div class="card-body">
+                <h5 class="card-title">{{$movie->title}}</h5>
+                <a href="#" class="btn btn-primary">{{$movie->original_title}}</a>
+                </div>
+            </div>    
+            
         </div>
-    </div>    
-    @endforeach
-    @dump($movies);
+        @endforeach
+        
+        @dump($movies)
+    </div>
+
+    
     
 </div>
 @endsection
