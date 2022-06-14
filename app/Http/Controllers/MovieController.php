@@ -3,18 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Movie;
 
-class Product extends Controller
+
+class MovieController extends Controller
 {
     public function index(){
-        //inserire controllor
+        $movies = Movie::all();
+        
+        return view('home',compact('movies'));
     }
     public function series(){
         return view('series');
     }
-    public function films(){
-        return view('home');
-    }
-
-
 }

@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'Product@films')->name('home');
+Route::get('/', 'MovieController@index')->name('home');
 
-Route::get('/movies','Product@index' )->name('movies');
+Route::get('/movies','MovieController@series' )->name('series');
 
-Route::get('/series', 'Product@series')->name('series');
+
 
 
